@@ -15740,11 +15740,11 @@ var _Sources = (() => {
       });
     }
     getMangaShareUrl(mangaId2) {
-      return `${MH_DOMAIN}/manga/${mangaId2}`;
+      return `${MH_DOMAIN}/manga/${mangaId2}/`;
     }
     async getMangaDetails(mangaId2) {
       const request = App.createRequest({
-        url: `${MH_DOMAIN}/manga/${mangaId2}`,
+        url: `${MH_DOMAIN}/manga/${mangaId2}/`,
         method: "GET"
       });
       const response = await this.requestManager.schedule(request, 1);
@@ -15753,7 +15753,7 @@ var _Sources = (() => {
     }
     async getChapters(mangaId2) {
       const request = App.createRequest({
-        url: `${MH_DOMAIN}/manga/${mangaId2}`,
+        url: `${MH_DOMAIN}/manga/${mangaId2}/`,
         method: "GET"
       });
       const response = await this.requestManager.schedule(request, 1);
