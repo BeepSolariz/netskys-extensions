@@ -15725,6 +15725,13 @@ var _Sources = (() => {
         }
       });
     }
+    // ADD THIS METHOD
+    getCloudflareBypassRequest() {
+      return App.createRequest({
+        url: MH_DOMAIN,
+        method: "GET"
+      });
+    }
     getMangaShareUrl(mangaId2) {
       return `${MH_DOMAIN}/manga/${mangaId2}`;
     }
