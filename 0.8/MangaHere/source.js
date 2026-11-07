@@ -15708,6 +15708,13 @@ var _Sources = (() => {
         requestTimeout: 2e4,
         interceptor: {
           interceptRequest: async (request) => {
+            // Force MangaHere requests to use HTTPS
+            if (request.url && request.url.startsWith("http://www.mangahere.cc")) {
+              request.url = request.url.replace(
+                "http://www.mangahere.cc",
+                "https://www.mangahere.cc"
+              );
+            }
             request.headers = {
               ...request.headers ?? {},
               ...{
